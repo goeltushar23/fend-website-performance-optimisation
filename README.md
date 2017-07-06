@@ -33,6 +33,8 @@
 
 #### Part 1: Changes done to Optimize PageSpeed Insights score for **index.html**
 
+Following changes have been done to achieve PageSpeed score for 94/95 on Mobile/Desktop.
+
 * Optimised images using ImageOptim to remove bloated metadata and resized the images according to page requirements.
 
 * Minified and Inlined `style.css`
@@ -52,4 +54,4 @@
 
 * **main.js**: In `updatePositions` function moved `document.body.scrollTop` out of forLoop to render the page with 60fps while scrolling
 
-* **main.js**: Changed `resizePizzas` function to reduce the time to resize pizzas
+* **main.js**: Changed `resizePizzas` function to reduce the time (< 5 ms) to resize pizzas
