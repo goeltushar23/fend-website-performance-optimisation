@@ -55,3 +55,5 @@ Following changes have been done to achieve PageSpeed score for 94/95 on Mobile/
 * **main.js**: In `updatePositions` function moved `document.body.scrollTop` out of forLoop to render the page with 60fps while scrolling
 
 * **main.js**: Changed `resizePizzas` function to reduce the time (< 5 ms) to resize pizzas
+
+* **main.js**: Line no 540 changed the forLoop to insert fewer background pizza images and moved `#movingPizzas1` selector outside for forLoop
