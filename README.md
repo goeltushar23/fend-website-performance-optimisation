@@ -26,7 +26,7 @@
   $> ./ngrok http 8080
   ```
 
-5. Copy the public URL ngrok gives you and try running it(<public URL>/dist/index.html) through [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+5. Copy the public URL ngrok gives you and try running it(__ngrok public URL__/dist/index.html) through [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 
 
 ### Change Log
@@ -35,11 +35,15 @@
 
 * Optimised images using ImageOptim to remove bloated metadata and resized the images according to page requirements.
 
-* Used Gulp tools to concat CSS files and minify JSS, CSS and HTML files
+* Minified and Inlined `style.css`
 
-* Added async to the Google analytics script so it doesn't block rendering
+* added `media="print"` to `print.css`
 
-* Moved the Google Analytics script to the bottom of the body so it doesn't block rendering
+* Used Gulp tools to `minify HTML` file
+
+* Minified and inlined `perfmatters.js`
+
+* Added `async` to the Google analytics script so it doesn't block rendering
 
 * Replaced the Google Font CSS file request to a JS script at the bottom of the body, so downloading the fonts will not block rendering.
 

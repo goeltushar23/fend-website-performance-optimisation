@@ -5,6 +5,14 @@ var rename = require('gulp-rename');
 var minifyCSS = require('gulp-minify-css');
 var minifyHTML = require('gulp-minify-html');
 
+// Minify HTML
+gulp.task('minifyHTML', function() {
+    gulp.src("src/index.html")
+        .pipe(minifyHTML())
+        .pipe(rename('index.html'))
+        .pipe(gulp.dest('dist'));
+});
+
 // Concat CSS
 gulp.task('concatCSS', function() {
     gulp.src([
@@ -31,12 +39,4 @@ gulp.task('minifyJS', function() {
         .pipe(gulp.dest('dist/js'));
 });
 
-// Minify HTML
-gulp.task('minifyHTML', function() {
-    gulp.src("src/index.html")
-        .pipe(minifyHTML())
-        .pipe(rename('index.html'))
-        .pipe(gulp.dest('dist'));
-});
-
-gulp.task('build', ['concatCSS', 'minifyCSS', 'minifyJS', 'minifyHTML']);
+gulp.task('build', ['minifyHTML']);
